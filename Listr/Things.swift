@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+
+struct Things {
+    @DocumentID var id: String?
+    var name: String
+    var category: String = ""
+    var check: Bool = false
+    
+    
+}

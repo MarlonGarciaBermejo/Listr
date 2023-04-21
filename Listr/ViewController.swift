@@ -6,12 +6,25 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var enterVC: UIButton!
+    let db = Firestore.firestore()
+    let segueIdEnter = "enterSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        func enterButton(_ sender: UIButton) {
+            performSegue(withIdentifier: segueIdEnter, sender: self)
+        }
+            
+        
+       
+        
+      
     }
 
 
