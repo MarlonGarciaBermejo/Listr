@@ -20,10 +20,14 @@
 		C770814F29ED7DB90064413C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C770814E29ED7DB90064413C /* FirebaseFirestore */; };
 		C770815129ED7DB90064413C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C770815029ED7DB90064413C /* FirebaseFirestoreSwift */; };
 		C770815329ED804A0064413C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C770815229ED80490064413C /* GoogleService-Info.plist */; };
-		C770815529ED84A90064413C /* Things.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770815429ED84A90064413C /* Things.swift */; };
 		C770815929F07C390064413C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770815829F07C390064413C /* ListViewController.swift */; };
 		C770815B29F0F6DB0064413C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770815A29F0F6DB0064413C /* TaskViewController.swift */; };
 		C770815D29F0F85E0064413C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770815C29F0F85E0064413C /* EntryViewController.swift */; };
+		C770816329F6AF460064413C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770816229F6AF460064413C /* SignUpViewController.swift */; };
+		C770816529F6AF530064413C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770816429F6AF530064413C /* SignInViewController.swift */; };
+		C770816A29F6BA740064413C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770816929F6BA740064413C /* Utilities.swift */; };
+		C770816C29F6D0610064413C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770816B29F6D0610064413C /* Constants.swift */; };
+		C770817129F6DFEF0064413C /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C770817029F6DFEE0064413C /* loginbg.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +62,14 @@
 		C770813C29ED7CA20064413C /* ListrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListrUITests.swift; sourceTree = "<group>"; };
 		C770813E29ED7CA20064413C /* ListrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C770815229ED80490064413C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C770815429ED84A90064413C /* Things.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Things.swift; sourceTree = "<group>"; };
 		C770815829F07C390064413C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C770815A29F0F6DB0064413C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C770815C29F0F85E0064413C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		C770816229F6AF460064413C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C770816429F6AF530064413C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C770816929F6BA740064413C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C770816B29F6D0610064413C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C770817029F6DFEE0064413C /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginbg.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +126,11 @@
 				C770815229ED80490064413C /* GoogleService-Info.plist */,
 				C770811B29ED7CA00064413C /* AppDelegate.swift */,
 				C770811D29ED7CA00064413C /* SceneDelegate.swift */,
-				C770811F29ED7CA00064413C /* ViewController.swift */,
+				C770816629F6B8600064413C /* View Controllers */,
 				C770812129ED7CA00064413C /* Main.storyboard */,
 				C770812429ED7CA10064413C /* Assets.xcassets */,
 				C770812629ED7CA10064413C /* LaunchScreen.storyboard */,
 				C770812929ED7CA10064413C /* Info.plist */,
-				C770815429ED84A90064413C /* Things.swift */,
-				C770815829F07C390064413C /* ListViewController.swift */,
-				C770815A29F0F6DB0064413C /* TaskViewController.swift */,
-				C770815C29F0F85E0064413C /* EntryViewController.swift */,
 			);
 			path = Listr;
 			sourceTree = "<group>";
@@ -146,6 +150,38 @@
 				C770813E29ED7CA20064413C /* ListrUITestsLaunchTests.swift */,
 			);
 			path = ListrUITests;
+			sourceTree = "<group>";
+		};
+		C770816629F6B8600064413C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C770816429F6AF530064413C /* SignInViewController.swift */,
+				C770816229F6AF460064413C /* SignUpViewController.swift */,
+				C770815829F07C390064413C /* ListViewController.swift */,
+				C770811F29ED7CA00064413C /* ViewController.swift */,
+				C770815A29F0F6DB0064413C /* TaskViewController.swift */,
+				C770815C29F0F85E0064413C /* EntryViewController.swift */,
+				C770816829F6BA230064413C /* Helpers */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C770816829F6BA230064413C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C770816929F6BA740064413C /* Utilities.swift */,
+				C770816B29F6D0610064413C /* Constants.swift */,
+				C770816D29F6D8F70064413C /* Media */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C770816D29F6D8F70064413C /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				C770817029F6DFEE0064413C /* loginbg.mp4 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C770812829ED7CA10064413C /* LaunchScreen.storyboard in Resources */,
+				C770817129F6DFEF0064413C /* loginbg.mp4 in Resources */,
 				C770815329ED804A0064413C /* GoogleService-Info.plist in Resources */,
 				C770812529ED7CA10064413C /* Assets.xcassets in Resources */,
 				C770812329ED7CA00064413C /* Main.storyboard in Resources */,
@@ -288,12 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C770815529ED84A90064413C /* Things.swift in Sources */,
+				C770816C29F6D0610064413C /* Constants.swift in Sources */,
 				C770812029ED7CA00064413C /* ViewController.swift in Sources */,
+				C770816329F6AF460064413C /* SignUpViewController.swift in Sources */,
 				C770811C29ED7CA00064413C /* AppDelegate.swift in Sources */,
 				C770815D29F0F85E0064413C /* EntryViewController.swift in Sources */,
+				C770816529F6AF530064413C /* SignInViewController.swift in Sources */,
 				C770815929F07C390064413C /* ListViewController.swift in Sources */,
 				C770811E29ED7CA00064413C /* SceneDelegate.swift in Sources */,
+				C770816A29F6BA740064413C /* Utilities.swift in Sources */,
 				C770815B29F0F6DB0064413C /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
