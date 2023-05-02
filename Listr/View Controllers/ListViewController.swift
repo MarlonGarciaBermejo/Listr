@@ -8,9 +8,10 @@
 import UIKit
 import Firebase
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewList: UITableView!
+    
     
     let db = Firestore.firestore()
     var tasks = [String]()
@@ -22,10 +23,10 @@ class ListViewController: UIViewController {
         
         tableViewList.delegate = self
         tableViewList.dataSource = self
-
+        
     }
     
-       override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         updateTasks()
@@ -34,7 +35,7 @@ class ListViewController: UIViewController {
     func updateTasks() {
         
         tasks.removeAll()
-    
+        
         db.collection("habbits").getDocuments { (snapshot, error) in
             let db = Firestore.firestore()
             let tasksRef = db.collection("habbits")
@@ -67,25 +68,17 @@ class ListViewController: UIViewController {
         
     }
     
-    
-}
-    
-    extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            
-            
-            let vc = storyboard?.instantiateViewController(withIdentifier: "task")as! TaskViewController
-            vc.title = "Habbit"
-            vc.task = tasks[indexPath.row]
-            navigationController?.pushViewController(vc, animated: true)
-            
-        }
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "task")as! TaskViewController
+        vc.title = "Habbit"
+        vc.task = tasks[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
-
     
-extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
@@ -137,3 +130,4 @@ extension ListViewController: UITableViewDataSource {
         }
     }
 }
+
