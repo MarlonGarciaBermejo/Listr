@@ -36,6 +36,8 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         let db = Firestore.firestore()
         let tasksRef = db.collection("habbits")
         
+        let habbitUID = UUID().uuidString
+        
         tasksRef.addDocument(data: ["habbit": text]) { error in
             if let error = error {
                 print("Error adding task: \(error)")

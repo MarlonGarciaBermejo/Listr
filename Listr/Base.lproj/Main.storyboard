@@ -512,7 +512,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-fM-2Or">
-                                <rect key="frame" x="125" y="553" width="148" height="42"/>
+                                <rect key="frame" x="113" y="553" width="166" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Done for today!"/>
                                 <connections>
